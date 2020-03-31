@@ -1,13 +1,15 @@
+package bronze;
+
 import java.util.ArrayList;
 
-// enum type for Vehicle
+// enum type for bronze.Vehicle
 enum VehicleSize {
     Motorcycle,
     Compact,
     Large,
 }
 
-//abstract Vehicle class
+//abstract bronze.Vehicle class
 abstract class Vehicle {
     // Write your code here
     protected int spotsNeeded;
@@ -299,7 +301,7 @@ public class ParkingLot {
 
     public void print() {
         for (int i = 0; i < levels.length; i++) {
-            System.out.print("Level" + i + ": ");
+            System.out.print("bronze.Level" + i + ": ");
             levels[i].print();
             System.out.println("");
         }

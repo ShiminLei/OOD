@@ -1,3 +1,5 @@
+package bronze;
+
 import java.util.*;
 import java.util.Map.Entry;
 
@@ -210,7 +212,7 @@ class LRUCache extends LinkedHashMap<SearchRequest, Map<RoomType, List<Room>>>{
 
         for(Entry<SearchRequest, Map<RoomType, List<Room>>> entry : super.entrySet())
         {
-            res += ("Search Request -> " + entry.getKey().toString() + "\n");
+            res += ("Search bronze.Request -> " + entry.getKey().toString() + "\n");
             res += ("Value -> " + printAvailableRooms(entry.getValue()) + "\n");
             res += "\n";
         }

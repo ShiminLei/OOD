@@ -1,3 +1,5 @@
+package bronze;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -197,11 +199,11 @@ public class Restaurant {
         for(int i = 0; i < tables.size(); i++)
         {
             Table table = tables.get(i);
-            description += ("Table: " + i + ", table size: " + table.getCapacity() + ", isAvailable: " + table.isAvailable() + ".");
+            description += ("bronze.Table: " + i + ", table size: " + table.getCapacity() + ", isAvailable: " + table.isAvailable() + ".");
             if(table.getCurrentOrder() == null)
                 description += " No current order for this table";
             else
-                description +=  " Order price: " + table.getCurrentOrder().getBill();
+                description +=  " bronze.Order price: " + table.getCurrentOrder().getBill();
 
             description += ".\n";
         }
