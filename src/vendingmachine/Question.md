@@ -25,5 +25,3 @@ Current selection is: Sprite, current inserted money: 0, current state is : HasS
 Current selection is: Sprite, current inserted money: 500, current state is : InsertedMoney
 
 Current selection is: null, current inserted money: 0, current state is : NoSelection
-
-Related Problems
