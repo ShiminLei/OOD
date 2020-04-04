@@ -2,6 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bab08263-8571-4eca-b775-8586c48ef66d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/gold/BlackJack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gold/BookingSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gold/CoffeeMaker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gold/Kindle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gold/TicTacToe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gold/VendingMachine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gold/restaurant2/Meal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gold/restaurant2/NoTableException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gold/restaurant2/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gold/restaurant2/Party.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gold/restaurant2/Question.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gold/restaurant2/Reservation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gold/restaurant2/Restaurant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gold/restaurant2/Table.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +40,9 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1ZrL0PLoJjzgLqM6hxQ5TqqROWP" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -63,6 +79,8 @@
       <workItem from="1585592043837" duration="4127000" />
       <workItem from="1585679489621" duration="1022000" />
       <workItem from="1585681704342" duration="9000" />
+      <workItem from="1585681770447" duration="57000" />
+      <workItem from="1586030175840" duration="1366000" />
     </task>
     <servers />
   </component>
@@ -70,6 +88,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="486" y="342" width="467" height="225" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1586031872467">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="486" y="342" width="467" height="225" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1440.900@0.0.1440.900" timestamp="1586031872467" />
     <state x="97" y="72" key="new project wizard" timestamp="1585671702501">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
