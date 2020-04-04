@@ -17,7 +17,7 @@ public class Restaurant {
         menu = new ArrayList<Meal>();
     }
 
-    public void findTable(Party p) throws Table.NoTableException
+    public void findTable(Party p) throws NoTableException
     {
         Date currentDate = new Date();
         for(Table t: tables)
@@ -34,7 +34,7 @@ public class Restaurant {
                 }
             }
         }
-        throw new Table.NoTableException(p);
+        throw new NoTableException(p);
     }
 
     public void takeOrder(Table t, Order o)
