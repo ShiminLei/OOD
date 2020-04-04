@@ -2,80 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bab08263-8571-4eca-b775-8586c48ef66d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/blackjack/BlackJack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blackjack/Card.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blackjack/Dealer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blackjack/Hand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blackjack/NormalPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/coffeemaker/AlreadyTakenException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/coffeemaker/GameEndException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/elevator/Direction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/elevator/ElevatorButton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/elevator/ExternalRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/elevator/InternalRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/elevator/Request.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/elevator/Status.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hotel/Hotel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hotel/LRUCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hotel/Reservation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hotel/ReservationRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hotel/Room.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hotel/RoomType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hotel/SearchRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hotel2/BookingSystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hotel2/Hotel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hotel2/LRUCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hotel2/Reservation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hotel2/ReservationRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hotel2/Room.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hotel2/RoomType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hotel2/SearchHotelRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hotel2/SearchRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kindle/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kindle/EBookReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kindle/EBookReaderFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kindle/EpubReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kindle/Format.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kindle/MobiReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kindle/PdfReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/parkinglot/Bus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/parkinglot/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/parkinglot/Level.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/parkinglot/Motorcycle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/parkinglot/ParkingLot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/parkinglot/ParkingSpot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/parkinglot/Vehicle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/parkinglot/VehicleSize.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/restaurant/Meal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/restaurant/NoTableException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/restaurant/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/restaurant/Party.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/restaurant/Restaurant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/restaurant/Table.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bronze/Elevator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/elevator/Elevator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bronze/Hotel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bronze/ParkingLot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bronze/Restaurant.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gold/BlackJack.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gold/BookingSystem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gold/CoffeeMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CoffeeMaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gold/Kindle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kindle/Kindle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gold/TicTacToe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coffeemaker/TicTacToe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gold/restaurant2/Meal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/restaurant2/Meal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gold/restaurant2/NoTableException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/restaurant2/NoTableException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gold/restaurant2/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/restaurant2/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gold/restaurant2/Party.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/restaurant2/Party.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gold/restaurant2/Question.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/restaurant2/Question.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gold/restaurant2/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/restaurant2/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gold/restaurant2/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/restaurant2/Restaurant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gold/restaurant2/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/restaurant2/Table.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gold/vendingmachine/AbstractState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendingmachine/AbstractState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gold/vendingmachine/HasSelectionState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendingmachine/HasSelectionState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gold/vendingmachine/InsertedMoneyState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendingmachine/InsertedMoneyState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gold/vendingmachine/NoSelectionState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendingmachine/NoSelectionState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gold/vendingmachine/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendingmachine/State.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gold/vendingmachine/VendingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendingmachine/VendingMachine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +66,7 @@
       <workItem from="1585679489621" duration="1022000" />
       <workItem from="1585681704342" duration="9000" />
       <workItem from="1585681770447" duration="57000" />
-      <workItem from="1586030175840" duration="3001000" />
+      <workItem from="1586030175840" duration="3168000" />
     </task>
     <servers />
   </component>
