@@ -55,6 +55,9 @@ public class VendingMachine {
         }
     }
 
+    /**
+     * 以下是有关 state change 的具体操作
+     */
     public void changeToNoSelectionState() {
         state = noSelectionState;
     }
