@@ -34,6 +34,7 @@ public class TicTacToe {
             }
         }
         gameEnd = true;
+        System.out.println("棋盘已经满了。");
         return true;
     }
 
@@ -47,7 +48,7 @@ public class TicTacToe {
 
     // true means this move wins the game, false means otherwise
     public boolean move(int row, int col) throws AlreadyTakenException, GameEndException {
-
+        isBoardFull();
         if (gameEnd) {
             throw new GameEndException();
         }
@@ -57,7 +58,12 @@ public class TicTacToe {
         }
 
         board[row][col] = currentPlayerMark;
+        boolean win = chechWin(row, col);
+        changePlayer();
+        return win;
+    }
 
+    private boolean chechWin(int row, int col){
         boolean win;
 
         //check row
@@ -115,8 +121,7 @@ public class TicTacToe {
             gameEnd = true;
             return win;
         }
-        changePlayer();
-        return win;
+        return false;
     }
 }
 
