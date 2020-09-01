@@ -1,4 +1,4 @@
-package ood.blackjack_laioffer_main;
+package ood.blackjack;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package ood.blackjack_laioffer_main;
+package ood.blackjack;
 
 public enum Suit {
     Club,
