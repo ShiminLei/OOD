@@ -24,27 +24,50 @@ class NormalPlayer {
         return this.id;
     }
 
+    /**
+     * 插入一张牌
+     * @param card
+     */
     public void insertCard(Card card) {
         hand.insertCard(card);
     }
 
+    /**
+     * 当前最好的分数
+     * @return
+     */
     public int getBestValue() {
         return hand.getBestValue();
     }
 
+    /**
+     * 不再抽牌
+     */
     public void stopDealing() {
         stopDealing = true;
     }
 
+    /**
+     * 加入游戏
+     * @param game
+     */
     public void joinGame(BlackJack game) {
         this.game = game;
         game.addPlayer(this);
     }
 
+    /**
+     * 抽一张牌
+     */
     public void dealNextCard() {
         insertCard(game.dealNextCard());
     }
 
+    /**
+     * 押注
+     * @param amount
+     * @throws Exception
+     */
     public void placeBets(int amount) throws Exception {
         if (totalBets < amount) {
             throw new Exception("No enough money.");
@@ -57,16 +80,23 @@ class NormalPlayer {
         return bets;
     }
 
-    public String printPlayer() {
-        return hand.printHand() + ", current bets: " + bets + ", total bets: " + totalBets + "\n";
-    }
-
+    /**
+     * 获胜得双倍注
+     */
     public void win() {
         totalBets += (bets * 2);
         bets = 0;
     }
 
+    /**
+     * 失败失去注
+     */
     public void lose() {
         bets = 0;
     }
+
+    public String printPlayer() {
+        return hand.printHand() + ", current bets: " + bets + ", total bets: " + totalBets + "\n";
+    }
+
 }

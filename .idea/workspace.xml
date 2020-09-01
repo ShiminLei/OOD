@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bab08263-8571-4eca-b775-8586c48ef66d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ood/blackjack_laioffer_main/BlackJackHand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ood/blackjack_laioffer_main/BlackJackHand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ood/blackjack/NormalPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ood/blackjack/NormalPlayer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +131,7 @@
       <workItem from="1586461717314" duration="2746000" />
       <workItem from="1586491161116" duration="16379000" />
       <workItem from="1586662623644" duration="7092000" />
-      <workItem from="1598936582489" duration="1463000" />
+      <workItem from="1598936582489" duration="3197000" />
     </task>
     <servers />
   </component>
