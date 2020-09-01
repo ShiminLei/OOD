@@ -1,12 +1,11 @@
 package ood.parkinglot;
 
 class ParkingSpot {
-    // Write your code here
-    private Vehicle vehicle;
-    private VehicleSize spotSize;
+    private Level level;
     private int row;
     private int spotNumber;
-    private Level level;
+    private VehicleSize spotSize;
+    private Vehicle vehicle = null;
 
     public ParkingSpot(Level lvl, int r, int n, VehicleSize sz) {
         level = lvl;
@@ -15,14 +14,20 @@ class ParkingSpot {
         spotSize = sz;
     }
 
+    /**
+     * spot 是否为空
+     * @return
+     */
     public boolean isAvailable() {
         return vehicle == null;
     }
+
     /* Checks if the spot is big enough for the vehicle (and is available). This compares
      * the SIZE only. It does not check if it has enough spots. */
     public boolean canFitVehicle(Vehicle vehicle) {
         return isAvailable() && vehicle.canFitInSpot(this);
     }
+
     /* Park vehicle in this spot. */
     public boolean park(Vehicle v) {
         if (!canFitVehicle(v)) {
@@ -50,17 +55,17 @@ class ParkingSpot {
         return spotSize;
     }
 
-    public void print() {
-        if (vehicle == null) {
-            if (spotSize == VehicleSize.Compact) {
-                System.out.print("c");
-            } else if (spotSize == VehicleSize.Large) {
-                System.out.print("l");
-            } else if (spotSize == VehicleSize.Motorcycle) {
-                System.out.print("m");
-            }
-        } else {
-            vehicle.print();
-        }
-    }
+//    public void print() {
+//        if (vehicle == null) {
+//            if (spotSize == VehicleSize.Compact) {
+//                System.out.print("c");
+//            } else if (spotSize == VehicleSize.Large) {
+//                System.out.print("l");
+//            } else if (spotSize == VehicleSize.Motorcycle) {
+//                System.out.print("m");
+//            }
+//        } else {
+//            vehicle.print();
+//        }
+//    }
 }

@@ -1,21 +1,29 @@
 package ood.parkinglot;
 
-/* Represents a level in a parking garage */
 class Level {
-    // Write your code here
+
     private int floor;
+    private int num_rows;
+    private int spots_per_row;
     private ParkingSpot[] spots;
-    private int availableSpots = 0; // number of free spots
-    private int SPOTS_PER_ROW;
+    private int availableSpots; // number of free spots
 
-
+    /**
+     * 第几次， 每层几行，每行几个spot
+     * @param flr
+     * @param num_rows
+     * @param spots_per_row
+     */
     public Level(int flr, int num_rows, int spots_per_row) {
-        floor = flr;
-        int SPOTS_PER_ROW = spots_per_row;
-        int numberSpots  = 0;
-        spots = new ParkingSpot[num_rows * spots_per_row];
+        this.floor = flr;
+        this.num_rows = num_rows;
+        this.spots_per_row = spots_per_row;
+        this.spots = new ParkingSpot[num_rows * spots_per_row];
 
-        //init size for each spot in array spots
+        /**
+         * 每行，1/4 motorcycle, 2/4 compact, 1/4 large
+         */
+        int numberSpots  = 0;
         for (int row = 0; row < num_rows; ++row) {
             for (int spot = 0; spot < spots_per_row / 4; ++spot) {
                 VehicleSize sz = VehicleSize.Motorcycle;
@@ -34,7 +42,7 @@ class Level {
             }
         }
 
-        availableSpots = numberSpots;
+        this.availableSpots = numberSpots;
     }
 
     /* Try to find a place to park this vehicle. Return false if failed. */
@@ -96,15 +104,15 @@ class Level {
         return availableSpots;
     }
 
-    public void print() {
-        int lastRow = -1;
-        for (int i = 0; i < spots.length; i++) {
-            ParkingSpot spot = spots[i];
-            if (spot.getRow() != lastRow) {
-                System.out.print("  ");
-                lastRow = spot.getRow();
-            }
-            spot.print();
-        }
-    }
+//    public void print() {
+//        int lastRow = -1;
+//        for (int i = 0; i < spots.length; i++) {
+//            ParkingSpot spot = spots[i];
+//            if (spot.getRow() != lastRow) {
+//                System.out.print("  ");
+//                lastRow = spot.getRow();
+//            }
+//            spot.print();
+//        }
+//    }
 }
