@@ -14,10 +14,18 @@ public class BlackJack {
         dealer = new Dealer();
     }
 
+    /**
+     * 初始化所有牌
+     * @param cards
+     */
     public void initCards(List<Card> cards) {
         this.cards = cards;
     }
 
+    /**
+     * 加 normal玩家
+     * @param p
+     */
     public void addPlayer(NormalPlayer p) {
         players.add(p);
     }

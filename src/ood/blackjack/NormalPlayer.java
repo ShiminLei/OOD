@@ -45,28 +45,6 @@ class NormalPlayer {
         return hand.getBestValue();
     }
 
-    /**
-     * 不再抽牌
-     */
-    public void stopDealing() {
-        stopDealing = true;
-    }
-
-    /**
-     * 加入游戏
-     * @param game
-     */
-    public void joinGame(BlackJack game) {
-        this.game = game;
-        game.addPlayer(this);
-    }
-
-    /**
-     * 抽一张牌
-     */
-    public void dealNextCard() {
-        insertCard(game.dealNextCard());
-    }
 
     /**
      * 押注
@@ -103,5 +81,28 @@ class NormalPlayer {
     public String printPlayer() {
         return hand.printHand() + ", current bets: " + bets + ", total bets: " + totalBets + "\n";
     }
+
+    /**
+     * 不再抽牌
+     */
+    public void stopDealing() {
+        stopDealing = true;
+    }
+
+//    /**
+//     * 加入游戏
+//     * @param game
+//     */
+//    public void joinGame(BlackJack game) {
+//        this.game = game;
+//        game.addPlayer(this);
+//    }
+//
+//    /**
+//     * 抽一张牌
+//     */
+//    public void dealNextCard() {
+//        insertCard(game.dealNextCard());
+//    }
 
 }

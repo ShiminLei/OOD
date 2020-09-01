@@ -35,20 +35,20 @@ class Dealer {
         bets += amount;
     }
 
-    /**
-     * 加入游戏
-     * @param game
-     */
-    public void setGame(BlackJack game) {
-        this.game = game;
-    }
-
-    /**
-     * 抽一张牌
-     */
-    public void dealNextCard() {
-        insertCard(game.dealNextCard());
-    }
+//    /**
+//     * 加入游戏
+//     * @param game
+//     */
+//    public void setGame(BlackJack game) {
+//        this.game = game;
+//    }
+//
+//    /**
+//     * 抽一张牌
+//     */
+//    public void dealNextCard() {
+//        insertCard(game.dealNextCard());
+//    }
 
     public String printDealer() {
         return "Dealer " + hand.printHand() + ", total bets: " + bets + "\n";
