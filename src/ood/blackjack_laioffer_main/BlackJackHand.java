@@ -85,10 +85,18 @@ public class BlackJackHand {
         return cards.size();
     }
 
+    /**
+     * 最理想的分数是不是超过21
+     * @return
+     */
     public boolean busted() {
         return score()>21;
     }
 
+    /**
+     * 判断手上的牌是不是正好是，A 和 10点牌 的组合
+     * @return
+     */
     public boolean isBlackJack() {
         if (cards.size()!=2){
             return false;
@@ -98,10 +106,20 @@ public class BlackJackHand {
         return (isAce(first)&&isFaceCard(second)) || (isAce(second) && isFaceCard(first));
     }
 
+    /**
+     * 判断是不是 A （1 或者 11）
+     * @param c
+     * @return
+     */
     private static boolean isAce(Card c){
         return c.value()==1;
     }
 
+    /**
+     * 判断点数是不是 10
+     * @param c
+     * @return
+     */
     private static boolean isFaceCard(Card c){
         return c.value()>=11 && c.value()<=13;
     }
