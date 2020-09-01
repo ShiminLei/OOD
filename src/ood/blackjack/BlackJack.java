@@ -1,4 +1,4 @@
-package ood.blackjack2;
+package ood.blackjack;
 
 import java.util.ArrayList;
 import java.util.List;

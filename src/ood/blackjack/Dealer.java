@@ -1,4 +1,4 @@
-package ood.blackjack2;
+package ood.blackjack;
 
 class Dealer {
     private BlackJack game;

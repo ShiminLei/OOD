@@ -1,4 +1,4 @@
-package ood.blackjack;
+package ood.blackjack2;
 
 public enum Suit {
     Club,

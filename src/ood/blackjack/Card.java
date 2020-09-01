@@ -1,19 +1,13 @@
 package ood.blackjack;
 
-public class Card {
-    private final int value;
-    private final Suit suit;
+class Card {
+    private int value;
 
-    public Card(int c, Suit s) {
-        this.value = c;
-        this.suit = s;
+    public Card(int value) {
+        this.value = value;
     }
 
-    public int value() {
+    public int getValue() {
         return value;
-    }
-
-    public Suit suit() {
-        return suit;
     }
 }
