@@ -26,6 +26,9 @@ public class VendingMachine {
         itemPrice.put("MountainDew", 399);
     }
 
+    /**
+     * 以下是可以被 state 调用的操作
+     */
     public void setSelectedItem(String item) {
         this.currentSelectedItem = item;
     }
@@ -56,7 +59,7 @@ public class VendingMachine {
     }
 
     /**
-     * 以下是有关 state change 的具体操作
+     * 以下是 state change
      */
     public void changeToNoSelectionState() {
         state = noSelectionState;
@@ -70,6 +73,9 @@ public class VendingMachine {
         state = insertedMoneyState;
     }
 
+    /**
+     * 以下是state 的操作
+     */
     public void selectItem(String selection) {
         state.selectItem(selection);
     }
@@ -86,13 +92,13 @@ public class VendingMachine {
         return state.cancelTransaction();
     }
 
-    public String printState() {
-        String res = "";
-
-        res = "Current selection is: " + currentSelectedItem + ", current inserted money: " + currentInsertedMoney
-                + ", current state is : " + state;
-
-        return res;
-    }
+//    public String printState() {
+//        String res = "";
+//
+//        res = "Current selection is: " + currentSelectedItem + ", current inserted money: " + currentInsertedMoney
+//                + ", current state is : " + state;
+//
+//        return res;
+//    }
 }
 
