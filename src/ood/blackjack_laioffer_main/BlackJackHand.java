@@ -8,6 +8,11 @@ public class BlackJackHand {
 
     private final List<Card> cards = new ArrayList<>();
 
+    /**
+     * 得到一张牌的分数
+     * @param card
+     * @return
+     */
     private int[] getScores(Card card){
         if (card.value()>1){
             return new int[]{Math.min(card.value(), 10)};
@@ -16,6 +21,11 @@ public class BlackJackHand {
         }
     }
 
+    /**
+     * 新抓一张牌，更新此时所有可能的分数
+     * @param card
+     * @param scores
+     */
     private void updateScores(Card card, List<Integer> scores){
         final int[] toAdd = getScores(card);
         if (scores.isEmpty()){
@@ -34,21 +44,29 @@ public class BlackJackHand {
         }
     }
 
+    /**
+     * 手上所有牌，所有可能的分数
+     * @return
+     */
     private List<Integer> possibleScores(){
         List<Integer> scores = new ArrayList<>();
-        for (Card card: cards){
+        for (Card card: cards){ // 一张一张牌更新分数
             updateScores(card, scores);
         }
         return scores;
     }
 
+    /**
+     * 当前最理想的分数
+     * @return
+     */
     public int score() {
         List<Integer> scores = possibleScores();
         if (scores.isEmpty()){
             return 0;
         }
-        int maxUnder = Integer.MIN_VALUE;
-        int minOver = Integer.MAX_VALUE;
+        int maxUnder = Integer.MIN_VALUE; // 不超过21中最大的分数
+        int minOver = Integer.MAX_VALUE; // 超过21中最小的分数
         for (int score: scores){
             if (score>21 && score<minOver){
                 minOver = score;
