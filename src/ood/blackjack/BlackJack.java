@@ -22,21 +22,25 @@ public class BlackJack {
         players.add(p);
     }
 
-
+    /**
+     * 初始化，每个人抽两张牌
+     */
     public void dealInitialCards() {
         for (NormalPlayer player : players) {
             player.insertCard(dealNextCard());
         }
-
         dealer.insertCard(dealNextCard());
 
         for (NormalPlayer player : players) {
             player.insertCard(dealNextCard());
         }
-
         dealer.insertCard(dealNextCard());
     }
 
+    /**
+     * 下一张牌
+     * @return
+     */
     public Card dealNextCard() {
         Card card = cards.remove(0);
         return card;
@@ -46,6 +50,9 @@ public class BlackJack {
         return dealer;
     }
 
+    /**
+     * 比较输赢
+     */
     public void compareResult() {
         for (NormalPlayer p : players) {
             if (dealer.largerThan(p)) {

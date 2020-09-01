@@ -8,6 +8,11 @@ class NormalPlayer {
     private int bets;
     private boolean stopDealing;
 
+    /**
+     * 初始化，玩家押注
+     * @param id
+     * @param bets
+     */
     public NormalPlayer(int id, int bets) {
         this.id = id;
         hand = new Hand();
