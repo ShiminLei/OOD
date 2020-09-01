@@ -1,4 +1,4 @@
-package ood.blackjack2;
+package ood.blackjack_laioffer_main;
 
 public class Card {
     private final int value;
