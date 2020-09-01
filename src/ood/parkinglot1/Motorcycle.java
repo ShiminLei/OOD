@@ -1,4 +1,4 @@
-package ood.parkinglot;
+package ood.parkinglot1;
 
 class Motorcycle extends Vehicle {
     // Write your code here

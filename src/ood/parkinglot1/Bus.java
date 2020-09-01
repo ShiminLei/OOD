@@ -1,4 +1,4 @@
-package ood.parkinglot;
+package ood.parkinglot1;
 
 class Bus extends Vehicle {
     // Write your code here

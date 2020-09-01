@@ -1,118 +1,50 @@
 package ood.parkinglot;
 
-class Level {
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
-    private int floor;
-    private int num_rows;
-    private int spots_per_row;
-    private ParkingSpot[] spots;
-    private int availableSpots; // number of free spots
+public class Level {
+    private final List<ParkingSpot> spots;
 
-    /**
-     * 第几次， 每层几行，每行几个spot
-     * @param flr
-     * @param num_rows
-     * @param spots_per_row
-     */
-    public Level(int flr, int num_rows, int spots_per_row) {
-        this.floor = flr;
-        this.num_rows = num_rows;
-        this.spots_per_row = spots_per_row;
-        this.spots = new ParkingSpot[num_rows * spots_per_row];
+    public Level(int numOfSpots){
+        List<ParkingSpot> list = new ArrayList<>(numOfSpots);
+        int i = 0;
+        for (; i < numOfSpots/2; i++){
+            list.add(new ParkingSpot(VehicleSize.Compact));
+        }
+        for (; i < numOfSpots; i++){
+            list.add(new ParkingSpot(VehicleSize.Large));
+        }
+        spots = Collections.unmodifiableList(list);
+    }
 
-        /**
-         * 每行，1/4 motorcycle, 2/4 compact, 1/4 large
-         */
-        int numberSpots  = 0;
-        for (int row = 0; row < num_rows; ++row) {
-            for (int spot = 0; spot < spots_per_row / 4; ++spot) {
-                VehicleSize sz = VehicleSize.Motorcycle;
-                spots[numberSpots] = new ParkingSpot(this, row, numberSpots, sz);
-                numberSpots ++;
-            }
-            for (int spot = spots_per_row / 4; spot < spots_per_row / 4 * 3; ++spot) {
-                VehicleSize sz = VehicleSize.Compact;
-                spots[numberSpots] = new ParkingSpot(this, row, numberSpots, sz);
-                numberSpots ++;
-            }
-            for (int spot = spots_per_row / 4 * 3; spot < spots_per_row; ++spot) {
-                VehicleSize sz = VehicleSize.Large;
-                spots[numberSpots] = new ParkingSpot(this, row, numberSpots, sz);
-                numberSpots ++;
+    public boolean hasSpot(Vehicle v){
+        for (ParkingSpot s: spots){
+            if (s.fit(v)){
+                return true;
             }
         }
-
-        this.availableSpots = numberSpots;
+        return false;
     }
 
-    /* Try to find a place to park this vehicle. Return false if failed. */
-    public boolean parkVehicle(Vehicle vehicle) {
-        if (availableSpots() < vehicle.getSpotsNeeded()) {
-            return false; // no enough spots
-        }
-        int spotNumber = findAvailableSpots(vehicle);
-        if(spotNumber < 0) {
-            return false;
-        }
-        return parkStartingAtSpot(spotNumber, vehicle);
-    }
-
-    /* find a spot to park this vehicle. Return index of spot, or -1 on failure. */
-    private int findAvailableSpots(Vehicle vehicle) {
-        int spotsNeeded = vehicle.getSpotsNeeded();
-        int lastRow = -1;
-        int spotsFound = 0;
-
-        for(int i = 0; i < spots.length; i++){
-            ParkingSpot spot = spots[i];
-            if(lastRow != spot.getRow()){
-                spotsFound = 0;
-                lastRow = spot.getRow();
-            }
-            if(spot.canFitVehicle(vehicle)){
-                spotsFound++;
-            }else{
-                spotsFound = 0;
-            }
-            if(spotsFound == spotsNeeded){
-                return i - (spotsNeeded - 1); // index of spot
+    public boolean park(Vehicle v){
+        for (ParkingSpot s: spots){
+            if (s.fit(v)){
+                s.park(v);
+                return true;
             }
         }
-        return -1;
+        return false;
     }
 
-    /* Park a vehicle starting at the spot spotNumber, and continuing until vehicle.spotsNeeded. */
-    private boolean parkStartingAtSpot(int spotNumber, Vehicle vehicle) {
-        vehicle.clearSpots();
-
-        boolean success = true;
-
-        for (int i = spotNumber; i < spotNumber + vehicle.spotsNeeded; i++) {
-            success &= spots[i].park(vehicle);
+    public boolean leave(Vehicle v){
+        for (ParkingSpot s: spots){
+            if (s.getVehicle()==v){
+                s.leave();
+                return true;
+            }
         }
-
-        availableSpots -= vehicle.spotsNeeded;
-        return success;
+        return false;
     }
-
-    /* When a car was removed from the spot, increment availableSpots */
-    public void spotFreed() {
-        availableSpots++;
-    }
-
-    public int availableSpots() {
-        return availableSpots;
-    }
-
-//    public void print() {
-//        int lastRow = -1;
-//        for (int i = 0; i < spots.length; i++) {
-//            ParkingSpot spot = spots[i];
-//            if (spot.getRow() != lastRow) {
-//                System.out.print("  ");
-//                lastRow = spot.getRow();
-//            }
-//            spot.print();
-//        }
-//    }
 }

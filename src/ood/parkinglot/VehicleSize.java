@@ -1,8 +1,16 @@
 package ood.parkinglot;
 
-// enum type for ood.parkinglot.Vehicle
-enum VehicleSize {
-    Motorcycle,
-    Compact,
-    Large,
+public enum VehicleSize {
+    Compact(1),
+    Large(2);
+
+    int size;
+
+    VehicleSize(int size) {
+        this.size = size;
+    }
+
+    public int getSize() {
+        return size;
+    }
 }

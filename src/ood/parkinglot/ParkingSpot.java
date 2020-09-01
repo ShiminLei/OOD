@@ -1,71 +1,26 @@
 package ood.parkinglot;
 
-class ParkingSpot {
-    private Level level;
-    private int row;
-    private int spotNumber;
-    private VehicleSize spotSize;
-    private Vehicle vehicle = null;
+public class ParkingSpot {
+    private final VehicleSize size;
+    private Vehicle currentVehicle;
 
-    public ParkingSpot(Level lvl, int r, int n, VehicleSize sz) {
-        level = lvl;
-        row = r;
-        spotNumber = n;
-        spotSize = sz;
+    public ParkingSpot(VehicleSize size) {
+        this.size = size;
     }
 
-    /**
-     * spot 是否为空
-     * @return
-     */
-    public boolean isAvailable() {
-        return vehicle == null;
+    public boolean fit(Vehicle v){
+        return currentVehicle==null && size.getSize()>=v.getSize().getSize();
     }
 
-    /* Checks if the spot is big enough for the vehicle (and is available). This compares
-     * the SIZE only. It does not check if it has enough spots. */
-    public boolean canFitVehicle(Vehicle vehicle) {
-        return isAvailable() && vehicle.canFitInSpot(this);
+    public void park(Vehicle v){
+        currentVehicle = v;
     }
 
-    /* Park vehicle in this spot. */
-    public boolean park(Vehicle v) {
-        if (!canFitVehicle(v)) {
-            return false;
-        }
-        vehicle = v;
-        vehicle.parkInSpot(this);
-        return true;
-    }
-    /* Remove vehicle from spot, and notify level that a new spot is available */
-    public void removeVehicle() {
-        level.spotFreed();
-        vehicle = null;
+    public void leave(){
+        currentVehicle = null;
     }
 
-    public int getRow() {
-        return row;
+    public Vehicle getVehicle(){
+        return currentVehicle;
     }
-
-    public int getSpotNumber() {
-        return spotNumber;
-    }
-
-    public VehicleSize getSize() {
-        return spotSize;
-    }
-
-//    public void print() {
-//        if (vehicle == null) {
-//            if (spotSize == VehicleSize.Compact) {
-//                System.out.print("c");
-//            } else if (spotSize == VehicleSize.Large) {
-//                System.out.print("l");
-//            } else if (spotSize == VehicleSize.Motorcycle) {
-//                System.out.print("m");
-//            }
-//        } else {
-//            vehicle.print();
-//        }
-//    }
 }
