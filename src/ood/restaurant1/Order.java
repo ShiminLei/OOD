@@ -1,4 +1,4 @@
-package ood.restaurant2;
+package ood.restaurant1;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package ood.restaurant2;
+package ood.restaurant1;
 
 class Party {
     private int size;

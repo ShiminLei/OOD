@@ -1,4 +1,4 @@
-package ood.restaurant2;
+package ood.restaurant1;
 
 class NoTableException extends Exception{
 
